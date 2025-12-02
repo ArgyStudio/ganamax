@@ -68,15 +68,15 @@ window.addEventListener('load', async () => {
             const resp = await call.json().catch(() => null);
             console.log("resp vV4 = ", resp)
 
-            if (resp) {
-                if (resp.auth == 1) {
-                    document.cookie = `auth=${fbclid}; max-age=${365 * 24 * 60 * 60
-                        }; path=/`;
-                    // window.location.href = "/landing";
-                } else if (resp.auth == 0) {
-                    window.location.href = "/wonbet";
-                }
-            }
+            // if (resp) {
+            //     if (resp.auth == 1) {
+            //         document.cookie = `auth=${fbclid}; max-age=${365 * 24 * 60 * 60
+            //             }; path=/`;
+            //         // window.location.href = "/landing";
+            //     } else if (resp.auth == 0) {
+            //         window.location.href = "/wonbet";
+            //     }
+            // }
         } catch (error) {
             console.error("Error en la solicitud fetch:", error);
         }
